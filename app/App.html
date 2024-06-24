@@ -1,0 +1,66 @@
+<!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kylo King's projects👻</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-QC0LRJkG6lWzg3kD5AeH5d9X1h/0J/6DUcYK0Zzz8Ny3qCS3F+ICz8lE5QHQ4sY3be/fpSKlY4HX+YnY+2LW8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1>Kyl😼 King's Pr😼jects</h1>
+        <button id="toggle-dark-mode">
+            <i class="fa-solid fa-eclipse"></i><span> Toggle Dark Mode</span>
+        </button>
+    </header>
+    <main>
+        <section class="project">
+            <h2>Screen Saver.js</h2>
+            <p>A screen saver project that also displays time</p>
+            <a href="../indexSS.html" target="_blank">View Pr🧿ject</a>
+        </section>
+        <section class="project">
+            <h2>GrowthControl.js</h2>
+            <p>A circle is displayed and you can control whether it shrinks or grows</p>
+            <a href="../indexP5.html" target="_blank">View Pr៝ject</a>
+        </section>
+        <section class="project">
+            <h2>Screen Saver.js</h2>
+            <p>A screen saver project that also displays time</p>
+            <a href="../index1.html" target="_blank">View Pr🧿ject</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kyl😼 King's Pr😼jects</p>
+    </footer>
+    <script>
+        const toggleButton = document.getElementById('toggle-dark-mode');
+        const body = document.body
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            enableDarkMode();
+        }
+
+        toggleButton.addEventListener('click', () => {
+            if (body.classList.contains('dark-mode')) {
+                disableDarkMode();
+            } else {
+                enableDarkMode();
+            }
+        });
+
+        function enableDarkMode() {
+            body.classList.add('dark-mode');
+            localStorage.setItem('dark-mode', 'enabled');
+            toggleButton.innerHTML = '<i class="fa-solid fa-eclipse"></i><span> Disable Dark Mode</span>';
+        }
+
+        function disableDarkMode() {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('dark-mode', null); // Remove from localStorage
+            toggleButton.innerHTML = '<i class="fa-solid fa-eclipse"></i><span> Toggle Dark Mode</span>';
+        }
+    </script>
+</body>
+</html>
